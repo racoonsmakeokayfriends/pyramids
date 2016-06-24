@@ -1,0 +1,198 @@
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+                         Config Style
+   ========================================================= */
+/* body */
+/* playing cards */
+/* =========================================================
+                      Main Components
+   ========================================================= */
+body {
+  background-color: #373633;
+  font-family: "Lato", Calibri, Arial, sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* =========================================================
+                        Playing Cards
+   ========================================================= */
+.pile {
+  width: 60px;
+  height: 80px;
+  border-radius: 7%;
+  border: 2px dashed #dedede;
+  display: inline-block;
+  margin: 5px;
+  position: relative;
+  /*  -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;*/
+}
+
+.pile .card {
+  margin: 0px;
+  position: absolue;
+  left: -2px;
+  top: -2px;
+}
+
+.card {
+  background-color: #ffffff;
+  font-size: 20px;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 80px;
+  border-radius: 7%;
+  margin: 5px;
+}
+
+.card.back {
+  /* add style here! :D */
+  background-color: #F9BA15;
+  border: 3px solid #ffffff;
+  background-image: url("http://media-cache-ec0.pinimg.com/236x/a6/29/21/a62921947a5ee8470fbb708898339f73.jpg");
+}
+
+.card .top, .card .bottom {
+  position: absolute;
+}
+
+.top {
+  left: 7px;
+  top: 2px;
+}
+
+.bottom {
+  bottom: 2px;
+  right: 7px;
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.suit {
+  top: 17px;
+}
+
+/*------------
+    Contents  
+  ------------*/
+.club {
+  color: #000000;
+}
+
+.diamond {
+  color: #ff0000;
+}
+
+.spade {
+  color: #000000;
+}
+
+.heart {
+  color: #ff0000;
+}
+
+.heart .suit::before {
+  content: '\2665';
+}
+
+.diamond .suit::before {
+  content: '\2666';
+}
+
+.spade .suit::before {
+  content: '\2660';
+}
+
+.club .suit::before {
+  content: '\2663';
+}
+
+.v1 .number::before {
+  content: 'A';
+}
+
+.v2 .number::before {
+  content: '2';
+}
+
+.v3 .number::before {
+  content: '3';
+}
+
+.v4 .number::before {
+  content: '4';
+}
+
+.v5 .number::before {
+  content: '5';
+}
+
+.v6 .number::before {
+  content: '6';
+}
+
+.v7 .number::before {
+  content: '7';
+}
+
+.v8 .number::before {
+  content: '8';
+}
+
+.v9 .number::before {
+  content: '9';
+}
+
+.v10 .number::before {
+  content: '10';
+}
+
+.v11 .number::before {
+  content: 'J';
+}
+
+.v12 .number::before {
+  content: 'Q';
+}
+
+.v13 .number::before {
+  content: 'K';
+}
+
+/* =========================================================
+                            Misc.
+   ========================================================= */
+.hidden {
+  display: none;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+#stats {
+  position: absolute;
+  border: 2px dashed #dedede;
+  padding: 5px;
+  left: 30%;
+}
+
+#stats label {
+  font-weight: bold;
+  display: block;
+}
