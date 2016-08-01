@@ -120,8 +120,34 @@ $(document).ready(function() {
                         DOM FUNCTIONS
    ========================================================= */
 
+   function create_alt_text(card) {
+    var html = '';
+    var VALS = {
+      'v1': 'ace',
+      'v2': 'two',
+      'v3': 'three',
+      'v4': 'four',
+      'v5': 'five',
+      'v6': 'six',
+      'v7': 'seven',
+      'v8': 'eight',
+      'v9': 'nine',
+      'v10': 'ten',
+      'v11': 'jack',
+      'v12': 'queen',
+      'v13': 'king'
+    };
+    html += VALS[card.val];
+    html += ' of ';
+    html +=  card.suit;
+    html += 's';
+
+    return html;
+   }
   function make_card_face_html(card) {
-    var html = '<div class="card ' + card.suit + ' ' + card.val + '">';
+    var html = '<div class="card ' + card.suit + ' ' + card.val;
+    html += '" alt="' + create_alt_text(card);
+    html += '">';
     html += '<div class="top">';
     html += '<div class="number"></div>';
     html += '<div class="suit"></div>';
